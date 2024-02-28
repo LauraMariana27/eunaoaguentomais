@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculos</title>
+</head>
+
+<body>
+    <main>
+        <script>
+            var contas = [
+                {
+                    name: "Longhiii",
+                    login: "longhi",
+                    senha: "aaaa1234"
+                },
+                {
+                    name: "Laurinha amor da minha vida",
+                    login: "laura",
+                    senha: "1234aaaa"
+                },
+            ]
+
+
+                var nome = prompt("Insira seu nome e sobrenome: ");
+                var login = prompt("Insira seu login: ");
+                var senha = prompt("Insira sua senha: ");
+                var prosseguir = confirm("Login confirmado. Clique em ok e siga em frente")
+                
+                if(prosseguir) {
+                    
+                    
+                    contas.push({
+                        name: nome,
+                        login: login,
+                        senha: senha
+                    })
+                    
+                    var insert_login = prompt("Insira seu login: ");
+                    var insert_senha = prompt("Insira sua senha: ");
+                    
+                    var logado = false;
+                    var conta_logada = {};
+                    contas.forEach(conta => {
+                        if(insert_login == conta.login && insert_senha == conta.senha){
+                            logado = true;
+                            conta_logada = conta;
+                        }
+                    });
+
+                    if (logado) {
+                        alert("Acesso Liberado. Bem vindo(a)," + conta_logada.name + "!")
+                    } else {
+                        alert("Acesso Negado. Saia daqui intruso!")
+                    }
+                }
+                
+
+            
+        </script>
+    </main>
+</body>
+
+</html>

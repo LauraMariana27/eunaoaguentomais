@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculos</title>
+</head>
+
+<body>
+    <main>
+        <script>
+            while (true) {
+
+                var a = prompt("Informe o número A: ");
+                var b = prompt("Informe o número B: ");
+                var c = prompt("Informe o número C: ");
+
+                var delta = (b * b) + (-4 * a * c)
+
+                if (delta < 0) {
+                    alert("Resolução impossível. Bestão.")
+                }
+                if (delta == 0) {
+                    var res = (b * -1) / (2 * a)
+                    alert("Resultado: " + res)
+                }
+                if (delta > 0) {
+                    var x1 = ((b * -1) + Math.sqrt(delta)) / (2 * a)
+                    var x2 = ((b * -1) - Math.sqrt(delta)) / (2 * a)
+                }
+                if (a == 0) {
+                    alert("Desista da sua vida :)")
+                } else {
+                    alert("Resultado: " + x1);
+                    alert("Resultado: " + x2);
+                }
+            }
+
+
+
+        </script>
+    </main>
+</body>
+
+</html>
